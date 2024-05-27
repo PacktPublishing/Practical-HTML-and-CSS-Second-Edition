@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>A gallery</title>
+    <link rel="preload" as="image" href="assets/img-01.jpg" />
+    <style>
+        :root {
+            --full-width: calc(100vw - 2rem);
+            --full-height: calc(100vh - var(--thumbnail-height) - 3rem);
+
+            --thumbnail-width: 150px;
+            --thumbnail-aspect-ratio: 3/2;
+            --thumbnail-height: calc(var(--thumbnail-width) * 1 / (var(--thumbnail-aspect-ratio)));
+        }
+
+        html, body { margin: 0; padding: 0; }
+
+        .full {
+            position: relative;
+            margin: 1rem auto;
+            width: var(--full-width);
+            max-height: var(--full-height);
+            background: white;
+            overflow: hidden;
+            display: flex; 
+            justify-content: center;
+            align-items: center;
+            object-fit: cover;
+        }
+
+        .full .image {
+            display: none;
+        }
+
+        .full:not(:has(.image:target)) .image:first-of-type,
+        .full .image:target {
+            z-index: 1;
+            display: block;
+        }
+
+        .thumbnails {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        .thumbnails > li {
+            list-style-type: none;
+        }
+
+        .thumbnail {
+            width: var(--thumbnail-width);
+            height: var(--thumbnail-height);
+        }
+
+        .hero {
+            width: 100%;
+            height: auto;
+        }
+
+        .loading {
+            width: 3rem;
+            height: 3rem;
+            border: .375rem solid lightskyblue;
+            border-color: transparent lightblue lightblue lightblue;
+            border-radius: 50%;
+            position: absolute;
+            animation: rotating 1s cubic-bezier(0.33, 0, 0.33, 0.9) infinite;
+        }
+
+        @keyframes rotating {
+            from { 
+                rotate: 0;
+            }
+            to { 
+                rotate: 360deg;
+            }
+        }
+    </style>
+  </head> 
+  <body>
+    <div class="gallery"> 
+        <div class="full"> 
+            <img id="hero-1" src="assets/img-01.jpg" loading="eager" fetchpriority="high" alt="" class="hero image" /> 
+            <img id="hero-2" src="assets/img-02.jpg" loading="lazy" fetchpriority="low" alt="" class="hero image" /> 
+            <img id="hero-3" src="assets/img-03.jpg" loading="lazy" fetchpriority="low" alt="" class="hero image" /> 
+            <img id="hero-4" src="assets/img-04.jpg" loading="lazy" fetchpriority="low" alt="" class="hero image" /> 
+            <img id="hero-5" src="assets/img-05.jpg" loading="lazy" fetchpriority="low" alt="" class="hero image" /> 
+            <img id="hero-6" src="assets/img-06.jpg" loading="lazy" fetchpriority="low" alt="" class="hero image" /> 
+            <img id="hero-7" src="assets/img-07.jpg" loading="lazy" fetchpriority="low" alt="" class="hero image" />
+            <div class="loading"></div>
+        </div>
+        <ul class="thumbnails">
+            <li>
+                <a href="#hero-1">
+                    <img src="https://placehold.co/600x400/png" alt="" class="thumbnail image" />
+                </a>
+            </li>
+            <li>
+                <a href="#hero-2">
+                    <img src="https://placehold.co/600x400/png" loading="lazy" fetchpriority="low" alt="" class="thumbnail image" />
+                </a>
+            </li>
+            <li>
+                <a href="#hero-3">
+                    <img src="https://placehold.co/600x400/png" loading="lazy" fetchpriority="low" alt="" class="thumbnail image" />
+                </a>
+            </li>
+            <li>
+                <a href="#hero-4">
+                    <img src="https://placehold.co/600x400/png" loading="lazy" fetchpriority="low" alt="" class="thumbnail image" />
+                </a>
+            </li>
+            <li>
+                <a href="#hero-5">
+                    <img src="https://placehold.co/600x400/png" loading="lazy" fetchpriority="low" alt="" class="thumbnail image" />
+                </a>
+            </li>
+            <li>
+                <a href="#hero-6">
+                    <img src="https://placehold.co/600x400/png" loading="lazy" fetchpriority="low" alt="" class="thumbnail image" />
+                </a>
+            </li>
+            <li>
+                <a href="#hero-7">
+                    <img src="https://placehold.co/600x400/png" loading="lazy" fetchpriority="low" alt="" class="thumbnail image" />
+                </a>
+            </li>
+        </ul>
+    </div>
+  </body>
+</html> 

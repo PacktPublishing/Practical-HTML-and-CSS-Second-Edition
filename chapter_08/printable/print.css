@@ -1,0 +1,47 @@
+@media print { 
+
+  body { 
+
+      margin: 1in; 
+
+      font-size: 12pt; 
+
+      color: black; 
+
+      background-color: white; 
+
+  } 
+
+
+
+  .navigation, .footer, .ad { 
+
+      display: none; 
+
+  } 
+
+
+
+  .content { 
+
+      padding: 0; 
+
+  } 
+
+
+
+  h1, h2, h3 { 
+
+      page-break-before: avoid; 
+
+  } 
+
+
+
+  .section { 
+
+      page-break-after: always; 
+
+  } 
+
+} 

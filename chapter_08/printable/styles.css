@@ -1,61 +1,27 @@
 body { 
-
   font-family: Arial, sans-serif; 
-
   margin: 0; 
-
   padding: 0; 
-
 } 
-
-
-
 .container { 
-
   padding: 1em; 
-
 } 
-
-
-
 .navigation, .footer, .ad { 
-
   display: block; 
-
   background: #f0f0f0; 
-
   padding: 1em; 
-
   margin: 1em 0; 
-
 } 
-
-
-
 .content { 
-
   padding: 1em; 
-
 } 
-
-
-
 /* Responsive design for screens */ 
-
 @media (max-width: 600px) { 
-
   .navigation, .footer, .ad { 
-
       padding: 0.5em; 
-
       margin: 0.5em 0; 
-
   } 
-
   .content { 
-
       padding: 0.5em; 
-
   } 
-
 } 

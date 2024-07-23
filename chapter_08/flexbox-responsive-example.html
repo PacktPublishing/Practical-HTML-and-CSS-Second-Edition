@@ -1,91 +1,44 @@
 <!DOCTYPE html> 
-
 <html lang="en"> 
-
 <head> 
-
 <meta charset="UTF-8"> 
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-
 <title>Responsive Flexbox Layout</title> 
-
 <style> 
-
   body { 
-
       margin: 0; 
-
       font-family: Arial, sans-serif; 
-
   } 
-
   .container { 
-
       display: flex; 
-
       flex-wrap: wrap; 
-
       justify-content: space-between; 
-
   } 
-
   .item { 
-
       flex-grow: 1; 
-
       flex-shrink: 1; 
-
       flex-basis: 200px; 
-
       margin: 10px; 
-
       padding: 20px; 
-
       background-color: #f0f0f0; 
-
       text-align: center; 
-
   } 
-
   .item:nth-child(even) { 
-
       background-color: #e0e0e0; 
-
   } 
-
   @media (max-width: 600px) { 
-
       .item { 
-
           flex-basis: 100%;  
-
       } 
-
   } 
-
 </style> 
-
 </head> 
-
 <body> 
-
- 
-
 <div class="container"> 
-
   <div class="item">Item 1</div> 
-
   <div class="item">Item 2</div> 
-
   <div class="item">Item 3</div> 
-
   <div class="item">Item 4</div> 
-
 </div> 
-
- 
-
 </body> 
-
 </html> 

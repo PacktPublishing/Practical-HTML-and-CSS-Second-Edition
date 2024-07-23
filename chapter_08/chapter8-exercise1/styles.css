@@ -1,0 +1,66 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  color: black;
+}
+
+header {
+  background-color: purple;
+  color: white;
+  padding: 10px;
+}
+
+h1 {
+  text-align: center;
+  margin: 0;
+  padding: 10px 0;
+}
+
+/* Mobile First Styles */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+nav ul li {
+  padding: 10px;
+  text-align: center;
+  border: 2px solid grey;
+  border-radius: 10px;
+  margin: 5px 0;
+  width: 80%;
+  background-color: white;
+  color: purple;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li:hover {
+  background-color: grey;
+  color: white;
+}
+
+/* Bigger Screens Styles */
+@media (min-width: 820px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  nav ul {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  nav ul li {
+    margin: 0 10px;
+    width: auto;
+  }
+}

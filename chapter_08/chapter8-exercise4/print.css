@@ -1,0 +1,31 @@
+/* Printing Styles */
+@media print {
+body {
+  font-family: Arial, sans-serif;
+}
+
+header {
+  display: none; 
+}
+.container {
+  display: block; 
+  margin: 0 auto; 
+}
+
+.card {
+  page-break-inside: avoid; 
+  margin-bottom: 2rem;
+  padding: 2rem;
+  background-color: rgb(224, 203, 224);
+}
+
+img {
+  display: block;
+  width: 100%;
+  max-height: 100%; 
+}
+
+nav {
+  display: none;
+}
+}

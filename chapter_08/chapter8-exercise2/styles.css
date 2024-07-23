@@ -1,0 +1,94 @@
+/* General Styles */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  color: black;
+}
+
+header {
+  background-color: purple;
+  color: white;
+  padding: 1rem;
+}
+
+h1 {
+  text-align: center;
+  margin: 0;
+  padding: 1rem 0;
+}
+
+/* Mobile First Styles */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+nav ul li {
+  padding: 1rem;
+  text-align: center;
+  border: .2rem solid grey;
+  border-radius: 1rem;
+  margin: .5rem 0;
+  width: 80%;
+  background-color: white;
+  color: purple;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li:hover {
+  background-color: grey;
+  color: white;
+}
+
+
+.container {
+  margin: 0 auto ;
+  padding: 2rem;
+  max-width: 100vw;
+}
+
+.card {
+  margin-bottom: 2rem;
+  padding: 2rem;
+  background-color: rgb(224, 203, 224);
+}
+
+img {
+  width: 100%;
+}
+
+/* Bigger Screens Styles */
+@media (min-width: 820px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  nav ul {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  nav ul li {
+    margin: 0 1rem;
+    width: auto;
+  }
+}

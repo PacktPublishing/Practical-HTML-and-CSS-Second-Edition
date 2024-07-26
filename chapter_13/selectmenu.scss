@@ -1,0 +1,102 @@
+button {
+  background: #eee;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  cursor: pointer;
+  min-width: 300px;
+  font-size: 16px;
+  border: 3px solid transparent;
+  border-image: linear-gradient(-45deg, var(--red) 0%, var(--yellow) 25%, var(--blue) 50%, var(--pink) 75%);
+  border-image-slice: 1;
+  background: aliceblue;
+}
+
+label {
+font-size: 80%;
+}
+
+option {
+display: grid;
+grid-template-columns: auto 1fr;
+align-items: center;
+background: white;
+}
+
+option:hover,
+option:focus {
+background-color: aliceblue;
+}
+
+figure {
+width: 1em;
+height: 1em;
+border-radius: 1em;
+margin: 1rem;
+}
+
+[popup=""] {
+border: 3px solid transparent;
+border-image: linear-gradient(45deg, var(--red) 0%, var(--yellow) 25%, var(--blue) 50%, var(--pink) 75%);
+border-image-slice: 1;
+}
+
+.red {
+background-color: var(--red);
+}
+
+.orange {
+background-color: var(--orange);
+}
+
+.yellow {
+background-color: var(--yellow);
+}
+
+.green {
+background-color: var(--green);
+}
+
+.blue {
+background-color: var(--blue);
+}
+
+.violet {
+background-color: var(--violet);
+}
+
+.pink {
+background-color: var(--pink);
+}
+
+
+@layer base {
+:root {
+  --red: #f65555;
+  --orange: orange;
+  --yellow: #ffdc1f;
+  --green: #4dc04d;
+  --blue: #38a4f7;
+  --violet: #c282ee;
+  --pink: #ff9bde;
+}
+
+body {
+  font-family: system-ui;
+  display: grid;
+  place-items: center;
+  min-height: 80vh;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+//   remove default padding
+[popup="" i] {
+  padding: 0;
+}
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Wrap Balance Example</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            padding: 40px;
+        }
+
+        .title-container {
+            max-width: 800px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .title {
+            font-size: 1em;
+            line-height: 1.3;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .title:hover {
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .balanced-title {
+            text-wrap: balance;
+        }
+
+        h1 {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="title-container">
+        <div class="title">
+            <h1>This is a long title that needs to break lines without text-wrap balance</h1>
+        </div>
+        <div class="title balanced-title">
+            <h1>This is a long title that needs to break lines with text-wrap balance</h1>
+        </div>
+    </div>
+</body>
+</html>

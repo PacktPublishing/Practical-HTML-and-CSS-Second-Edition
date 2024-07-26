@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discrete Property Transition Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+
+        #toggleCheckbox {
+            display: none;
+        }
+
+        #box {
+            width: 300px;
+            padding: 20px;
+            background-color: #4caf50;
+            color: white;
+            text-align: center;
+            border-radius: 8px;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out allow-discrete;
+            display: none;
+        }
+
+        #toggleCheckbox:checked + #box {
+            opacity: 1;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <label for="toggleCheckbox" class="button">Toggle Box</label>
+    <input type="checkbox" id="toggleCheckbox">
+    <div id="box">
+        <p>This box appears and disappears using discrete transitions!</p>
+    </div>
+</body>
+</html>

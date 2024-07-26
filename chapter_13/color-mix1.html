@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Mix Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f9;
+        }
+
+        .color-box {
+            width: 150px;
+            height: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .srgb {
+            background-color: color-mix(in srgb, red 50%, blue);
+        }
+
+        .display-p3 {
+            background-color: color-mix(in display-p3, red 50%, blue);
+        }
+
+        .a98-rgb {
+            background-color: color-mix(in a98-rgb, red 50%, blue);
+        }
+
+        .prophoto-rgb {
+            background-color: color-mix(in prophoto-rgb, red 50%, blue);
+        }
+
+        .rec2020 {
+            background-color: color-mix(in rec2020, red 50%, blue);
+        }
+    </style>
+</head>
+<body>
+    <div class="color-box srgb">sRGB</div>
+    <div class="color-box display-p3">Display P3</div>
+    <div class="color-box a98-rgb">A98-RGB</div>
+    <div class="color-box prophoto-rgb">ProPhoto-RGB</div>
+    <div class="color-box rec2020">Rec. 2020</div>
+</body>
+</html>

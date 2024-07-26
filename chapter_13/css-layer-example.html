@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Layer Example</title>
+  <style>
+
+    @layer special, theme, base;
+    
+    @layer base {
+      a {
+        font-weight: bold;
+        color: black; /* ignored */
+      }
+      .nav-link {
+        color: blue; /* ignored */
+      }
+    }
+
+    @layer theme {
+      a {
+        color: purple; /* styles all links */
+      }
+    }
+
+    @layer special {
+      .accent {
+        color: orange;  /* styles all .accent elements */
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>CSS Layers Example</h1>
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#" class="nav-link">About</a></li>
+    <li><a href="#" class="accent">Services</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</body>
+</html>

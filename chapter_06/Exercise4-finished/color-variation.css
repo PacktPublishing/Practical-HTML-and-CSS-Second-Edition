@@ -1,0 +1,24 @@
+:root {
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --primary-color: 	#0c457d;    
+    --secondary-color: #e8702a;  
+    --text-color: #061b1a; 
+    --background-color: #fcf6ed;
+    --highlight-color: #6bd2db;    
+  }  
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary-color: hsl(31, 84%, 26%); 
+    --secondary-color: hsl(200, 81%, 51%);
+    --text-color: hsl(358, 100%, 100%);
+    --background-color: hsl(225, 83%, 0%);
+    --highlight-color: hsl(3, 66%, 67%);
+  }    
+  
+}

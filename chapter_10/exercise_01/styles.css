@@ -1,0 +1,15 @@
+body { 
+  font-family: Arial, sans-serif; 
+} 
+
+.header { 
+  font-size: 2em; 
+} 
+
+.content { 
+  margin: 20px; 
+} 
+
+.footer { 
+  font-size: 0.8em; 
+}

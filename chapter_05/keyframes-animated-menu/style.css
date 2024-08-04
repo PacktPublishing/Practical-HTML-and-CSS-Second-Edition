@@ -1,0 +1,65 @@
+/* CSS RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* INITIAL STYLES */
+
+aside {
+  width: 280px;
+  background-color: #093c9b;
+  padding: 10px;
+  height: 100vh;
+}
+
+ul li {
+  list-style: none;
+  padding: 10px 15px;
+  background-color: #053081;
+  border-radius: 10px;
+  margin: 10px;  
+  transition: background-color 0.5s ease-in-out;
+}
+
+ul li:hover {
+  background-color: #2059b6;
+}
+
+ul li a {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Verdana', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  transition: font-weight 0.5s;
+}
+
+ul li:hover a {
+  font-weight: bolder;
+}
+
+ul li a img {
+  width: 20px;
+  height: 20px;
+  transition: 0.5s;
+}
+
+ul li:hover a img {
+  width: 24px;
+  height: 24px;
+  animation: shake 0.4s ease;
+}
+
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px) rotate(5deg); }
+  50% { transform: translateX(5px) rotate(-5deg); }
+  75% { transform: translateX(-5px) rotate(5deg); }
+  100% { transform: translateX(0); }
+}

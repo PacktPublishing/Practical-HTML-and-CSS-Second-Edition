@@ -1,0 +1,42 @@
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+[popover] {
+  font-size: 1.2rem;
+  padding: 10px;
+}
+
+[popover]:popover-open {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+[popover] {
+  /* Final state of the exit animation */
+  opacity: 0;
+  transform: scaleX(0);
+
+  transition-property: opacity, transform, overlay, display;
+  transition-duration: 0.7s;  
+  transition-behavior: allow-discrete;
+  /* Using the shorthand transition property, we could write:
+    transition: 
+      opacity 0.7s,
+      transform 0.7s,
+      overlay 0.7s allow-discrete,
+      display 0.7s allow-discrete;
+
+    or even:
+    transition: all 0.7s allow-discrete;
+  */
+}
+
+/* Needs to be included after the previous [popover]:popover-open 
+   rule to take effect, as the specificity is the same */
+@starting-style {
+  [popover]:popover-open {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+}

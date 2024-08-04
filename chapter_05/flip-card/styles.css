@@ -1,0 +1,28 @@
+.bee {
+  width: 50px;
+  height: 50px;
+  background-color: yellow;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the bee */
+  animation: beeFlight 3s infinite linear; /* Apply the bee flight animation */
+}
+
+@keyframes beeFlight {
+  0% {
+    transform: translate(-50%, -50%); /* Starting position */
+  }
+  25% {
+    transform: translate(0, -100%); /* Move up */
+  }
+  50% {
+    transform: translate(50%, 0); /* Move right */
+  }
+  75% {
+    transform: translate(0, 100%); /* Move down */
+  }
+  100% {
+    transform: translate(-50%, 0); /* Move left */
+  }
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Animation Example</title>
+  <style>
+    
+    body {
+      display: flex;
+    }
+    .initial-state,
+    .final-state {
+      width: 200px;
+      height: 200px;
+      display: inline-block;
+      margin: 20px;
+      padding: 20px;
+      box-sizing: border-box;
+      text-align: center;
+    }
+
+    .initial-state {
+      background-color: lightblue;
+    }
+
+    .final-state {
+      background-color: lightblue;
+      filter: blur(10px)
+    }
+
+    .label {
+      font-size: 16px;
+      color: #000000;
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+    } 
+    div.label.final {      
+      filter: blur(0px);
+    }
+
+    @keyframes blurAnimation {
+      from {
+        filter: blur(0px); /* No blur at the beginning */
+      }
+      to {
+        filter: blur(10px); /* Blurred effect at the end */
+      }
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <div class="initial-state"></div>
+    <div class="label">Initial State</div>
+  </div>
+<div>
+  <div class="final-state"> </div>
+  <div class="label final">Final State</div>
+</div>
+</body>
+</html>

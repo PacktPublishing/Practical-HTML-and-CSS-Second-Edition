@@ -1,0 +1,16 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    padding: 0;
+    margin: 1rem;
+}
+
+h1 {
+    margin: 0;
+    margin-bottom: 1rem;
+}
+
+p {
+    margin: 0;
+    margin-bottom: .5rem;
+}

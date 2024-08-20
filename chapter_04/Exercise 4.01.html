@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Simple form</title>
+  </head>
+
+  <body>
+    <form action="url_to_send_form_data" method="post">
+      <fieldset>
+        <div>
+          <label for="title">Title:</label><br />
+          <select id="title">
+            <option value="Mr">Mr</option>
+            <option value="Mrs">Mrs</option>
+            <option value="Ms">Ms</option>
+            <option value="Miss">Miss</option>
+          </select>
+        </div>
+        <div>
+          <label for="first_name">First name:</label><br />
+          <input id="first_name" type="text" name="firstname" />
+        </div>
+        <div>
+          <label for="last_name">Last name:</label><br />
+          <input id="last_name" type="text" name="lastname" />
+        </div>
+        <div>
+          <label for="message">Message: </label><br />
+          <textarea id="message" rows="5" cols="20"></textarea>
+        </div>
+        <button type="submit">Submit</button>
+      </fieldset>
+    </form>
+  </body>
+</html>

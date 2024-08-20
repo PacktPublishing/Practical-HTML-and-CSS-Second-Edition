@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Validation form</title>
+    <style>
+      :root {
+        --valid-color: green;
+        --invalid-color: red;
+      }
+
+      body {
+        font-family: arial, sans-serif;
+      }
+
+      div {
+        margin-bottom: 30px;
+      }
+
+      fieldset {
+        border: 0;
+        padding: 30px;
+      }
+
+      label {
+        font-size: 20px;
+      }
+
+      input,
+      textarea {
+        border: 0;
+        border-bottom: 1px solid gray;
+        padding: 10px 0;
+        width: 200px;
+      }
+
+      select {
+        background: transparent;
+        border: 0;
+        border-radius: 0;
+        border-bottom: 1px solid gray;
+        box-shadow: none;
+        color: #666;
+        -webkit-appearance: none;
+        padding: 10px 0;
+        width: 100%;
+      }
+
+      .select-wrapper {
+        position: relative;
+        width: 200px;
+      }
+
+      .select-wrapper:after {
+        content: "<>";
+        color: #666;
+        font-size: 14px;
+        top: 8px;
+        right: 0;
+        transform: rotate(90deg);
+        position: absolute;
+        z-index: -1;
+      }
+
+      button {
+        background: #999;
+        border: 0;
+        color: white;
+        font-size: 12px;
+        height: 50px;
+        width: 200px;
+        text-transform: uppercase;
+      }
+
+      input:valid,
+      textarea:valid {
+        border-bottom-color: var(--valid-color);
+      }
+
+      input:invalid,
+      textarea:invalid {
+        border-bottom-color: var(--invalid-color);
+      }
+    </style>
+  </head>
+
+  <body>
+    <form action="url_to_send_form_data" method="post">
+      <fieldset>
+        <div>
+          <label for="first_name">First name:</label><br />
+          <input
+            id="first_name"
+            type="text"
+            name="firstname"
+            placeholder="Your first name"
+            required
+          />
+        </div>
+        <div>
+          <label for="last_name">Last name:</label><br />
+          <input
+            id="last_name"
+            type="text"
+            name="lastname"
+            placeholder="Your last name"
+            required
+          />
+        </div>
+
+        <label for="country">Country:</label>
+        <div class="select-wrapper">
+          <select id="country">
+            <option value="england">England</option>
+            <option value="scotland">Scotland</option>
+            <option value="ireland">Ireland</option>
+            <option value="wales">Wales</option>
+          </select>
+        </div>
+
+        <label for="message">Message:</label><br />
+        <textarea
+          id="message"
+          rows="5"
+          cols="20"
+          placeholder="Your message"
+          required
+        ></textarea>
+        <br /><br />
+
+        <button type="submit">Submit</button>
+      </fieldset>
+    </form>
+  </body>
+</html>

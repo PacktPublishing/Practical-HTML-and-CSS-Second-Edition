@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>News article page</title>
+    <style>
+      :root {
+        --bg-color: #659494;
+        --text-color: #fff;
+        --size-large: 30px;
+        --size-medium: 20px;
+      }
+
+      header,
+      nav,
+      article,
+      aside,
+      footer {
+        background: var(--bg-color);
+        border-radius: 5px;
+        color: var(--text-color);
+        font-family: arial, san-serif;
+        font-size: var(--size-large);
+        text-align: center;
+        padding: var(--size-large);
+        margin-bottom: var(--size-medium);
+      }
+
+      header:before,
+      nav:before,
+      article:before,
+      aside:before,
+      footer:before {
+        content: "<";
+      }
+
+      header:after,
+      nav:after,
+      article:after,
+      aside:after,
+      footer:after {
+        content: ">";
+      }
+
+      article {
+        float: left;
+        margin-right: var(--size-medium);
+        width: 60%;
+      }
+
+      aside {
+        float: left;
+        width: calc(40% - 140px);
+      }
+
+      footer {
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <header>header</header>
+    <nav>nav</nav>
+    <article>article</article>
+    <aside>aside</aside>
+    <footer>footer</footer>
+  </body>
+</html>

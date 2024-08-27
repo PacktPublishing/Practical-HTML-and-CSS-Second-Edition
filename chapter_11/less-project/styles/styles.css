@@ -1,0 +1,17 @@
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: #c9041e;
+}
+h1 {
+  color: #fb3852;
+}
+.btn-primary {
+  background-color: #c9041e;
+  border: none;
+  padding: 10px;
+  color: white;
+}
+.btn-primary:hover {
+  background-color: #970317;
+}

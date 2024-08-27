@@ -1,0 +1,9 @@
+/* State styles */
+.button:hover {
+  opacity: 0.8;
+}
+
+.button:disabled {
+  background-color: lightgray;
+  cursor: not-allowed;
+}

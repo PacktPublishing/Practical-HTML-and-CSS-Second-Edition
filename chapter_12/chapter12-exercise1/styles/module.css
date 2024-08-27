@@ -1,0 +1,40 @@
+/* Module styles */
+.profile-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  max-width: 300px;
+  margin: 20px auto;
+  text-align: center;
+  background-color: #fff;
+}
+
+.profile-card__photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 16px;
+}
+
+.profile-card__name {
+  font-size: 1.5em;
+  margin: 8px 0;
+}
+
+.profile-card__bio {
+  font-size: 1em;
+  color: #666;
+}
+
+.button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button--primary {
+  background-color: blue;
+  color: white;
+}

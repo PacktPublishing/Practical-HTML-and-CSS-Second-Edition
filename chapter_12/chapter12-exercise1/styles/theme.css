@@ -1,0 +1,23 @@
+/* Theme styles */
+.theme-light {
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.theme-dark {
+  background-color: #333;
+  color: #f9f9f9;
+}
+
+.theme-dark .profile-card {
+  background-color: #444;
+  border-color: #555;
+}
+
+.theme-dark .button--primary {
+  background-color: darkblue;
+}
+
+.theme-dark header, .theme-dark footer {
+  background-color: #222;
+}

@@ -1,0 +1,23 @@
+.header {
+  background-color: #f8f9fa;
+  padding: 20px;
+}
+
+.header__title {
+  font-size: 2em;
+  margin: 0;
+}
+
+.nav {
+  margin-top: 10px;
+}
+
+.nav__link {
+  margin-right: 15px;
+  text-decoration: none;
+  color: #007bff;
+}
+
+.nav__link--active {
+  font-weight: bold;
+}

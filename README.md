@@ -68,4 +68,4 @@ With the following software and hardware list you can run all code files present
 
 
 ## Other books by the authors
-* [The HTML and CSS Workshop](https://www.packtpub.com/networking-and-servers/linux-mint-essentials?utm_source=github&utm_medium=repository&utm_campaign=9781782168157)
+* [The HTML and CSS Workshop](https://www.packtpub.com/en-us/product/the-html-and-css-workshop-9781838824532)
